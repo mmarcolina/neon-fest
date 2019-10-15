@@ -1,14 +1,14 @@
 import turtle
 
-turtle.color("blue") 
+turtle.color("blue")      #The Color Trail that Turtle Leaves Behind
   
-def sqrfunc(size): 
-    for i in range(4): 
+def sqrfunc(size):
+    for i in range(4):    #The Number of Sides on the Shape Turtle Makes
         turtle.fd(size) 
-        turtle.left(90) 
+        turtle.left(90)   #The Angle that Turtle Turns
         size = size-5
   
-sqrfunc(146) 
+sqrfunc(146)              #The Size of Each Side of the Shape Turtle Makes
 sqrfunc(126) 
 sqrfunc(106) 
 sqrfunc(86) 
