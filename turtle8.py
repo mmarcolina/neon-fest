@@ -11,12 +11,12 @@ def createTurtle(color, width):
 
 def inScreen(screen, turtle):
 
-    x = screen.window_width() / 2                       #The Width of the Window that Turtle Creates
-    y = screen.window_height() / 2                      #The Height of the Window that Turtle Creates
+    x = screen.window_width() / 2                       #The Width of the Window
+    y = screen.window_height() / 2                      #The Height of the Window
 
-    turtleX, turtleY = turtle.pos()
+    turtleX, turtleY = turtle.pos()                     #Tells us what the Turtle's X & Y coordinates are
 
-    return (-x < turtleX < x) and (-y < turtleY < y)
+    return (-x < turtleX < x) and (-y < turtleY < y)    #Sets Turtle's position within the positive & negative bounds of X & Y
 
 def moveTurtle():
 
@@ -24,7 +24,7 @@ def moveTurtle():
     turtle.forward(random.randrange(200))               #The Length that Turtle Moves, Random Between 0 and 200 Units
 
     if not inScreen(screen, turtle):
-        turtle.undo()  # undo forward()
+        turtle.undo()                                   #If the Turtle moves outside of the bounds of the screen, undo last move
 
     screen.ontimer(moveTurtle, 50)                      #Move Turtle Every 50 Milliseconds
 
