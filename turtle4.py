@@ -5,7 +5,7 @@ turtle.bgcolor("black")                                             #The Backgro
 color = ["red", "orange", "yellow", "light green", "cyan", "pink"]  #The Various Colors Available to Turtle
 
 for i in range(4):                                                  #The Number of Times that Turtle Moves
-    turtle.pencolor(random.choice(color))
+    turtle.pencolor(random.choice(color))                           #Select a random color from the array of colors defined above
     turtle.forward(100)                                             #The Length that Turtle Moves
     turtle.right(50)                                                #The Angle that Turtle Turns
     for i in range(3):                                              #The Number of Times that Turtle Moves
