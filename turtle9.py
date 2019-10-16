@@ -41,13 +41,13 @@ my_colors = Gradients([{'steps':10, 'start':[0,0,0], 'end':[255,255,255]},
                        {'steps':40, 'start':[255,0,10], 'end':[0,255,0]},
                        {'steps':50, 'start':[0,255,0], 'end':[255,255,0]},
                        {'steps':60, 'start':[255,255,0], 'end':[255,0,255]}])
-COUNT = 200
-ANGLE = 15
-STARTING_LENGTH = 20
-LENGTH_INCREMENT = 0
-DISTANCE_INCREMENT = 1
-dist = 0
-N = 8
+COUNT = 200                 #Number of Times Turtle Runs
+ANGLE = 15                  #The Angle that Turtle Turns (per shape)
+STARTING_LENGTH = 20        #The Starting Length That Turtle Moves
+LENGTH_INCREMENT = 0        #Adjusts the Size of the Shape by this Amount Every Run
+DISTANCE_INCREMENT = 1      #Adjusts the Distance between Shapes by this Amount Every Run
+dist = 0                    #The Starting Distance between the Shapes
+N = 8                       #The Number of Sides the Shape has
 
 
 def draw_polygon(turtle, size):
@@ -61,7 +61,7 @@ def draw_polygon(turtle, size):
 screen = Screen()
 screen.colormode(255)
 pen = Turtle()
-pen.speed('fastest')
+pen.speed('fastest')        #The Speed that Turtle Moves
 length = STARTING_LENGTH
 for r in range(COUNT):
     color = my_colors.get_next_color()
