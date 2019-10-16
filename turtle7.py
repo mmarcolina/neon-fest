@@ -1,29 +1,29 @@
 from turtle import Turtle, Screen
 import random
 
-colors = ["red", "blue", "yellow", "green"]
+colors = ["red", "blue", "yellow", "green"]         #The Various Colors Available to Turtle
 pen = Turtle()
-pen.speed("fastest")
+pen.speed("fastest")                                #The Speed that Turtle Moves
 screen = Screen()
 
 def draw_circles():
-    for i in range(200):
+    for i in range(200):                            #The Number of Times that Turtle Moves, While Drawing the circles
         pen.color(colors[i % 4], colors[i % 4])
         pen.fillcolor()
         pen.begin_fill()
-        pen.circle(i)
+        pen.circle(i)                               #The of the Circle that Turtle Makes, Increases Every Run
         pen.end_fill()
-        pen.left(90)
+        pen.left(90)                                #The Angle that Turtle Turns
 
 
 
 def draw_star():
-    pen.color("black")
-    for j in range(12):
-        pen.forward(-90)         
-        for i in range(50):
-            pen.forward(300)
-            pen.right(165)       
+    pen.color("black")                              #The Color of the Trail that Turtle Leaves
+    for j in range(12):                             #The Number of Times that Turtle Moves
+        pen.forward(-90)                            #The Length that Turtle Moves
+        for i in range(50):                         #The Number of Times that Turtle Moves
+            pen.forward(300)                        #The Length that Turtle Moves
+            pen.right(165)                          #The Angle that Turtle Turns
 
 draw_circles()
 draw_star()
